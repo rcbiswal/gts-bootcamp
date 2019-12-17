@@ -8,6 +8,6 @@ data "aws_ami" "ami" {
 resource "aws_instance" "web" {
   ami           = "${data.aws_ami.ami.id}"
   instance_type = "t2.micro"
-  subnet_id = "subnet-0b1a60c5dd16fa6b5"
+  subnet_id = "subnet-068a7ce09208d6bf9"
   tags { Name  = "${var.name}-CREATED-BY-JENKINS" }
 }
